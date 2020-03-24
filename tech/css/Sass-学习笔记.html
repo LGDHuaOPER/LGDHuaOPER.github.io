@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sass学习笔记 | 敬昭的博客</title>
+    <meta name="description" content="LGD.HuaFEEng博客网站-技术分类-CSS专题-Sass学习笔记">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="keywords"><meta content="CSS,Sass,Scss,学习,笔记,前端">
+    <link rel="preload" href="/assets/css/0.styles.2cb03319.css" as="style"><link rel="preload" href="/assets/js/app.fb4441b5.js" as="script"><link rel="preload" href="/assets/js/2.6f8ad18e.js" as="script"><link rel="preload" href="/assets/js/12.60342f6b.js" as="script"><link rel="prefetch" href="/assets/js/10.4101a812.js"><link rel="prefetch" href="/assets/js/11.7aa784b2.js"><link rel="prefetch" href="/assets/js/13.4c3ae2e9.js"><link rel="prefetch" href="/assets/js/14.ad9064cf.js"><link rel="prefetch" href="/assets/js/15.c430d68f.js"><link rel="prefetch" href="/assets/js/3.5e9b1950.js"><link rel="prefetch" href="/assets/js/4.20d12a66.js"><link rel="prefetch" href="/assets/js/5.473172a2.js"><link rel="prefetch" href="/assets/js/6.86b998d0.js"><link rel="prefetch" href="/assets/js/7.eb89ed52.js"><link rel="prefetch" href="/assets/js/8.39eeaed5.js"><link rel="prefetch" href="/assets/js/9.46df0f69.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2cb03319.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/nav.log.jpg" alt="敬昭的博客" class="logo"> <span class="site-name can-hide">敬昭的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="technology" class="dropdown-title"><span class="title">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tech/css/" class="nav-link router-link-active">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/tech/other/" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/essay/" class="nav-link">
+  随笔
+</a></div><div class="nav-item"><a href="/works/" class="nav-link">
+  作品
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于" class="dropdown-title"><span class="title">关于</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about/about-me.html" class="nav-link">
+  关于我
+</a></li><li class="dropdown-item"><!----> <a href="https://juejin.im/user/5ae00598518825672f198952" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/LGDHuaOPER/LGDHuaOPER.github.io--src" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="technology" class="dropdown-title"><span class="title">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tech/css/" class="nav-link router-link-active">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/tech/other/" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/essay/" class="nav-link">
+  随笔
+</a></div><div class="nav-item"><a href="/works/" class="nav-link">
+  作品
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于" class="dropdown-title"><span class="title">关于</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about/about-me.html" class="nav-link">
+  关于我
+</a></li><li class="dropdown-item"><!----> <a href="https://juejin.im/user/5ae00598518825672f198952" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/LGDHuaOPER/LGDHuaOPER.github.io--src" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">博客首页</a></li><li><a href="/tech/css/" class="sidebar-link">CSS专题</a></li><li><a href="/tech/css/Less-学习笔记.html" class="sidebar-link">Less-学习笔记</a></li><li><a href="/tech/css/Sass-学习笔记.html" class="active sidebar-link">Sass学习笔记</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_1、工具与安装" class="sidebar-link">1、工具与安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_1-1-工具" class="sidebar-link">1.1 工具</a></li><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_1-2-如何安装-sublime-text-plugins" class="sidebar-link">1.2 如何安装 Sublime Text Plugins:</a></li></ul></li><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_2、sass-与-compass" class="sidebar-link">2、Sass 与 Compass</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_2-1-为什么需要-css-预处理器" class="sidebar-link">2.1 为什么需要 css 预处理器</a></li><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_2-2-什么是-sass" class="sidebar-link">2.2 什么是 Sass</a></li><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_2-3-sass-与-css" class="sidebar-link">2.3 Sass 与 CSS</a></li><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_2-4-sass-与-scss" class="sidebar-link">2.4 .sass 与.scss</a></li><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_2-5-什么是-compass" class="sidebar-link">2.5 什么是 Compass</a></li><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_2-6-sass-与-compass-的安装" class="sidebar-link">2.6 Sass 与 Compass 的安装</a></li></ul></li><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_3、sass、less-与-stylus" class="sidebar-link">3、Sass、Less 与 Stylus</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_3-1-官网" class="sidebar-link">3.1 官网</a></li><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_3-2-安装" class="sidebar-link">3.2 安装</a></li><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_3-3-语法" class="sidebar-link">3.3 语法</a></li></ul></li><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#四、sass-语法" class="sidebar-link">四、Sass 语法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_4-1-sass-基础" class="sidebar-link">4.1 Sass 基础</a></li><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_4-2-sass-进阶" class="sidebar-link">4.2 Sass 进阶</a></li><li class="sidebar-sub-header"><a href="/tech/css/Sass-学习笔记.html#_4-3-sass-高级" class="sidebar-link">4.3 Sass 高级</a></li></ul></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#_1、工具与安装">1、工具与安装</a><ul><li><a href="#_1-1-工具">1.1 工具</a></li><li><a href="#_1-2-如何安装-sublime-text-plugins">1.2 如何安装 Sublime Text Plugins:</a></li></ul></li><li><a href="#_2、sass-与-compass">2、Sass 与 Compass</a><ul><li><a href="#_2-1-为什么需要-css-预处理器">2.1 为什么需要 css 预处理器</a></li><li><a href="#_2-2-什么是-sass">2.2 什么是 Sass</a></li><li><a href="#_2-3-sass-与-css">2.3 Sass 与 CSS</a></li><li><a href="#_2-4-sass-与-scss">2.4 .sass 与.scss</a></li><li><a href="#_2-5-什么是-compass">2.5 什么是 Compass</a></li><li><a href="#_2-6-sass-与-compass-的安装">2.6 Sass 与 Compass 的安装</a></li></ul></li><li><a href="#_3、sass、less-与-stylus">3、Sass、Less 与 Stylus</a><ul><li><a href="#_3-1-官网">3.1 官网</a></li><li><a href="#_3-2-安装">3.2 安装</a></li><li><a href="#_3-3-语法">3.3 语法</a></li></ul></li><li><a href="#四、sass-语法">四、Sass 语法</a><ul><li><a href="#_4-1-sass-基础">4.1 Sass 基础</a></li><li><a href="#_4-2-sass-进阶">4.2 Sass 进阶</a></li><li><a href="#_4-3-sass-高级">4.3 Sass 高级</a></li></ul></li></ul></div><p></p> <h2 id="_1、工具与安装"><a href="#_1、工具与安装" class="header-anchor">#</a> 1、工具与安装</h2> <h3 id="_1-1-工具"><a href="#_1-1-工具" class="header-anchor">#</a> 1.1 工具</h3> <ul><li>（IDE）WebStorm：http://www.jetbrains.com/webstorm/</li> <li>（Text Editor）Sublime Text：http://www.sublimetext.com/</li></ul> <h3 id="_1-2-如何安装-sublime-text-plugins"><a href="#_1-2-如何安装-sublime-text-plugins" class="header-anchor">#</a> 1.2 如何安装 Sublime Text Plugins:</h3> <ul><li>安装 Package Control：https://packagecontrol.io/</li> <li>Ctrl+` 打开控制台，执行：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')
+</code></pre></div><ul><li>Ctrl+Shift+P 输入 Pci 打开 Package Control Install，然后安装 Sass 和 Sass Build</li></ul> <h2 id="_2、sass-与-compass"><a href="#_2、sass-与-compass" class="header-anchor">#</a> 2、Sass 与 Compass</h2> <h3 id="_2-1-为什么需要-css-预处理器"><a href="#_2-1-为什么需要-css-预处理器" class="header-anchor">#</a> 2.1 为什么需要 css 预处理器</h3> <ul><li>使用变量</li> <li>自动转化 RGBA 颜色值</li> <li>浏览器前缀</li> <li>嵌套规则</li> <li>media query 更简单</li> <li>自动压缩 css</li></ul> <h3 id="_2-2-什么是-sass"><a href="#_2-2-什么是-sass" class="header-anchor">#</a> 2.2 什么是 Sass</h3> <ul><li>https://sass-lang.com/</li></ul> <h3 id="_2-3-sass-与-css"><a href="#_2-3-sass-与-css" class="header-anchor">#</a> 2.3 Sass 与 CSS</h3> <ul><li>CSS 并不能算是一门真正意义上的“编程”语言，无法完成嵌套、继承、设置变量等工作</li> <li>解决 CSS 的不足，开发者想到了编写一种对 css 进行预处理的“中间语言”</li></ul> <h3 id="_2-4-sass-与-scss"><a href="#_2-4-sass-与-scss" class="header-anchor">#</a> 2.4 .sass 与.scss</h3> <ul><li>最初它是为了配合 haml 而设计，所以和 haml 有着一样的缩进风格</li> <li>从第三代开始，保留缩进式风格，完全向下兼容普通的 css 代码</li></ul> <h3 id="_2-5-什么是-compass"><a href="#_2-5-什么是-compass" class="header-anchor">#</a> 2.5 什么是 Compass</h3> <ul><li>http://compass-style.org/</li> <li>Compass is an open-source CSS Authoring Framework.</li> <li>Compass 是 Sass 的工具库</li> <li>在 Sass 的基础上封装了一系列有用的模块和模板，补充 Sass 的功能</li> <li>Compass 与 Sass 的关系类似于 jQuery 与 JavaScript 的关系</li> <li>模块
+<ul><li>reset 模块</li> <li>css3 模块</li> <li>layout 模块</li> <li>typography 模块</li> <li>utilities 模块</li></ul></li></ul> <h3 id="_2-6-sass-与-compass-的安装"><a href="#_2-6-sass-与-compass-的安装" class="header-anchor">#</a> 2.6 Sass 与 Compass 的安装</h3> <ul><li>https://sass-lang.com/install</li> <li>http://compass-style.org/install/</li> <li>Ruby
+<ul><li>https://www.ruby-lang.org/en/</li> <li>https://rubyinstaller.org/</li></ul></li> <li>依赖 Ruby，所以要先安装 Ruby</li> <li>Windows 下通过 RubyInstallers 来安装</li> <li>gem sources [-r | -a | -u][https://gems.ruby-china.com | http://ruby.taobao.org]</li> <li>安装 Compass： gem install compass</li></ul> <h2 id="_3、sass、less-与-stylus"><a href="#_3、sass、less-与-stylus" class="header-anchor">#</a> 3、Sass、Less 与 Stylus</h2> <h3 id="_3-1-官网"><a href="#_3-1-官网" class="header-anchor">#</a> 3.1 官网</h3> <ul><li>https://sass-lang.com/</li> <li>http://lesscss.org/</li> <li>http://stylus-lang.com/</li></ul> <h3 id="_3-2-安装"><a href="#_3-2-安装" class="header-anchor">#</a> 3.2 安装</h3> <ul><li>Sass 需要安装 Ruby，然后通过 gem 安装</li> <li>Less 有两种安装方式
+<ul><li>客户端：引入 less.js，然后就可以直接使用.less 文件</li></ul> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>stylesheet/less<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text/css<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>a.less<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><ul><li>服务器：先安装 node，然后 npm 安装 less</li></ul></li> <li>Stylus 的安装类似于 Less 的服务端安装</li></ul> <h3 id="_3-3-语法"><a href="#_3-3-语法" class="header-anchor">#</a> 3.3 语法</h3> <ul><li><p>都支持多行注释与单行注释</p></li> <li><p>.sass 缩进</p></li> <li><p>.scss 兼容 css 写法</p></li> <li><p>.less 兼容 css 写法</p></li> <li><p>.styl</p> <div class="language-stylus extra-class"><pre class="language-stylus"><code><span class="token selector">h1 <span class="token punctuation">{</span></span>
+  <span class="token property-declaration"><span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">h1</span>
+  <span class="token property-declaration"><span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span></span>
+
+<span class="token selector">h1</span>
+  <span class="token property-declaration"><span class="token property">color</span> red</span>
+</code></pre></div><ul><li>三种语法可混用</li></ul></li> <li><p>变量定义</p> <ul><li>.sass $color: red</li> <li>.scss $color: red;</li> <li>.less @color: red;</li> <li>.styl $color: red; color: red;</li></ul></li> <li><p>嵌套</p></li> <li><p>混入</p> <ul><li>.scss @mixin alert($color: blue){color: $color;}</li> <li>.less .alert(@color: blue){color: @color;}</li> <li>.styl alert($color = blue){color: $color;}</li></ul></li> <li><p>继承</p> <ul><li>.scss<div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">.block </span><span class="token punctuation">{</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">p </span><span class="token punctuation">{</span>
+  <span class="token keyword">@extend</span> .block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>.less<div class="language-less extra-class"><pre class="language-less"><code><span class="token selector">.block</span> <span class="token punctuation">{</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">p</span> <span class="token punctuation">{</span>
+  <span class="token mixin-usage function">.block</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>.styl 与.scss 一样</li></ul></li></ul> <h2 id="四、sass-语法"><a href="#四、sass-语法" class="header-anchor">#</a> 四、Sass 语法</h2> <h3 id="_4-1-sass-基础"><a href="#_4-1-sass-基础" class="header-anchor">#</a> 4.1 Sass 基础</h3> <ul><li><p>创建工程</p> <ul><li>使用 Sass 创建
+<ul><li>新建文件夹，书写 sass 文件</li> <li>使用 sass 命令</li></ul></li> <li>使用 Compass 创建
+<ul><li>compass create [projectName]</li> <li>compass create --bare --sass-dir &quot;sass&quot; --css-dir &quot;css&quot; --images-dir &quot;img&quot; --javascript-dir &quot;js&quot;</li> <li>编译 Sass sass [sassFile][cssfile]</li> <li>监视 Sass 文件 sass --watch [sassFile]:[cssFile]</li> <li>监视文件夹 sass --watch [sassFolder]:[cssFolder]</li> <li>编译 Sass compass compile
+<ul><li>此命令为 Compass 命令</li> <li>此命令只会编译有变化的 Sass 文件，如果要强制编译所有的 Sass 文件，可以使用： compass compile --force</li> <li>一般在 Compass 项目根目录执行</li> <li>Usage: compass compile [path/to/project][path/to/project/src/file.sass ...] [options]</li> <li>显示帮助信息 compass compile --help</li></ul></li> <li>监视文件夹 compass watch</li> <li>四种输出风格
+<ul><li>--style [nested|expanded|compact|compressed]</li> <li>nested<div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">body </span><span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>expanded<div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">body </span><span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>compact<div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">body </span><span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>compressed<div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">body </span><span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ul></li></ul></li></ul></li> <li><p>使用命令行</p></li> <li><p>理解 config.rb</p> <ul><li>environment = :development</li> <li>output_style = (environment == :development) ? :expanded : :compressed</li></ul></li> <li><p>Sass 的注释语法</p> <ul><li>// 注释 不会生成到文件中</li> <li>/*<em>/ 会生成到文件中（compressed 模式不会生成到文件中）（如果 compressed 模式也要生成，用/</em>!*/ 重要注释）</li> <li>中文注释
+<ul><li>engine.rb 添加以下代码</li> <li>Encoding.default_external = Encoding.find('utf-8')</li> <li>engine.rb 文件路径（根据自己的安装路径）：E:\Program Files\Ruby26-x64\lib\ruby\gems\2.6.0\gems\sass-3.4.25\lib\sass</li></ul></li></ul></li> <li><p>Sass 变量</p> <ul><li>局部变量 与{}作用域有关</li> <li>全局变量 $color: red !global; 可在任意地方定义</li> <li>变量默认值 $fontSize: 12px !default; 先解析默认值</li> <li>多值变量
+<ul><li>$paddings: 5px 10px 5px 10px;    padding-left: nth($paddings, 1) (索引值是 1 开始)</li> <li>$maps: (color: red, borderColor: blue);    background-color: map-get($maps, color);</li></ul></li> <li>变量特殊用法
+<ul><li>变量用在熟悉或者选择器上，使用#{变量名}</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token property"><span class="token variable">$className</span></span><span class="token punctuation">:</span> main<span class="token punctuation">;</span>
+<span class="token selector">.<span class="token variable">#{$className}</span> </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>变量中 - 与 _ 不影响。$text-info: lightgreen; 与 $text_info: lightgreen; 一样</li></ul></li></ul></li> <li><p>样式导入</p> <ul><li>部分文件
+<ul><li>_part.scss 以下划线开头，不会被编译，专门为导入而编写的 sass 文件，不会被生成对应的独立文件</li> <li>局部文件可以被多个不同的文件引用，可以和 默认变量值 配合</li> <li>@import &quot;part&quot;;</li></ul></li> <li>嵌套导入</li> <li>原生 CSS 导入
+<ul><li>@import &quot;css.css&quot;; 文件名字以.css 结尾</li> <li>@import &quot;http://sss/xx&quot;; 是一个 URL 地址</li> <li>@import url(css.css); 文件名字是 CSS 中的 url()值</li></ul></li></ul></li> <li><p>嵌套</p> <ul><li>选择器嵌套</li> <li>属性嵌套</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">footer </span><span class="token punctuation">{</span>
+  <span class="token selector">background: </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token property">size</span><span class="token punctuation">:</span> 100% 50%<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>&amp;--引用父选择器</li> <li>@at-root，跳出嵌套
+<ul><li>默认@at-root 只会跳出选择器嵌套，而不能跳出@media 或@support，如果要跳出这两种，则需使用@at-root（without: media），@at-root(without: support)。这个语法的关键词有四个：all（所有），rule（常规 css），media（media），support（support，因为@support 目前还无法广泛使用，所以在此不表）。我们默认的@at-root 其实就是@at-root(without: rule)。</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token atrule"><span class="token rule">@media</span> screen <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 600px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token atrule"><span class="token rule">@at-root</span> <span class="token punctuation">(</span><span class="token property">without</span><span class="token punctuation">:</span> media rule<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.container </span><span class="token punctuation">{</span>
+      <span class="token property">background</span><span class="token punctuation">:</span> lightgreen<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>@at-root 与 &amp;</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">.text-info </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+  <span class="token atrule"><span class="token rule">@at-root</span> nav &amp;</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>继承</p> <ul><li>简单继承</li> <li>多继承</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">.alert </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #ffeedd<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.small </span><span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*第一种*/</span>
+<span class="token selector">.alert-info </span><span class="token punctuation">{</span>
+  <span class="token keyword">@extend</span> .alert<span class="token punctuation">;</span>
+  <span class="token keyword">@extend</span> .small<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*第二种*/</span>
+<span class="token selector">.alert-info </span><span class="token punctuation">{</span>
+  <span class="token keyword">@extend</span> .alert<span class="token punctuation">,</span> .small<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><p>链型继承</p></li> <li><p>继承的局限性</p> <ul><li>不支持：包含选择器（.one .two）或者相邻兄弟选择器（.one + .two）</li> <li>如果继承的元素是 a，恰巧这个元素 a 又有 hover 状态的形式，那么 hover 状态也会被继承</li></ul></li> <li><p>继承交叉合并</p> <ul><li>没有在同一个父级下，会产生交叉合并的编译结果</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">.one a </span><span class="token punctuation">{</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.two .three </span><span class="token punctuation">{</span>
+  <span class="token keyword">@extend</span> a<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">a span </span><span class="token punctuation">{</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> blod<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">div .content </span><span class="token punctuation">{</span>
+  <span class="token keyword">@extend</span> span<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*! 编译成*/</span>
+<span class="token selector">a span,
+a div .content,
+div a .content </span><span class="token punctuation">{</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> blod<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>继承的作用域</p> <ul><li>继承在指令中是有作用域问题的，继承是无法使用在指令如（@media）之外的选择器继承的，要是继承就只能写在指令中（内外也不能重名）</li></ul></li></ul></li> <li><p>占位选择器%</p> <ul><li>不会单独生成到 css 中去</li> <li>可以定义公用的样式</li> <li>优势在于：如果不调用则不会有任何多余的 css 文件，避免了以前在一些基础的文件中预定义了很多基础的样式，然后实际应用中不管是否使用了@extend 去继承相应的样式，都会解析出来所有的样式。占位选择器以%标识定义，通过@extend 调用</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector"><span class="token placeholder">%alert</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #ffeedd<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.alert-info </span><span class="token punctuation">{</span>
+  <span class="token keyword">@extend</span> <span class="token placeholder selector">%alert</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>换肤</p> <ul><li>disabled link</li></ul> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>skin.css<span class="token punctuation">&quot;</span></span> <span class="token attr-name">disabled</span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><ul><li>给 body 设置 class，使用嵌套语法</li></ul></li></ul> <h3 id="_4-2-sass-进阶"><a href="#_4-2-sass-进阶" class="header-anchor">#</a> 4.2 Sass 进阶</h3> <ul><li><p>数据类型</p> <ul><li><p>Number</p> <ul><li>https://sass-lang.com/documentation/values/numbers</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$n1: 1.2;
+$n2: 12;
+$n3: 12px;
+</code></pre></div></li> <li><p>String</p> <ul><li>https://sass-lang.com/documentation/values/strings</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$s1: container;
+$s2: 'container';
+$s3: &quot;container&quot;;
+</code></pre></div></li> <li><p>List</p> <ul><li>https://sass-lang.com/documentation/values/lists</li></ul></li> <li><p>Map</p> <ul><li>https://sass-lang.com/documentation/values/maps</li></ul></li> <li><p>Color</p> <ul><li>https://sass-lang.com/documentation/values/colors</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token property"><span class="token variable">$c1</span></span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$c2</span></span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$c3</span></span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li><p>Boolean</p> <ul><li>https://sass-lang.com/documentation/values/booleans</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token property"><span class="token variable">$bt</span></span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$bf</span></span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li><p>Null</p> <ul><li>https://sass-lang.com/documentation/values/null</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token property"><span class="token variable">$null</span></span><span class="token punctuation">:</span> <span class="token null keyword">null</span><span class="token punctuation">;</span>
+</code></pre></div></li></ul></li> <li><p>变量操作</p> <ul><li>== , != 支持所有数据类型</li> <li>&lt; , &gt; , &lt;= , &gt;= 仅仅支持数字类型</li> <li>'+' , '-' , '*' , '/' , '%'</li> <li>插值<div class="language-scss extra-class"><pre class="language-scss"><code><span class="token property"><span class="token variable">$version</span></span><span class="token punctuation">:</span> 3<span class="token punctuation">;</span>
+<span class="token selector">p:before </span><span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">'Hello, Sass #{$version}'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>其他注意<div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">/*原生css规则，不计算*/</span>
+<span class="token selector">p </span><span class="token punctuation">{</span>
+  <span class="token property">font</span><span class="token punctuation">:</span> 20px <span class="token operator">/</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*强制运算*/</span>
+<span class="token selector">p </span><span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>100px <span class="token operator">/</span> 2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*报错*/</span>
+<span class="token selector">p </span><span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>100 <span class="token operator">/</span> 2px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ul></li> <li><p>Mixin</p> <ul><li>简单扩展</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token keyword">@mixin</span> <span class="token selector">cont </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">body </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> cont<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*带参数*/</span>
+<span class="token keyword">@mixin</span> <span class="token function">cont</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> red<span class="token punctuation">,</span> <span class="token property"><span class="token variable">$fontSize</span></span><span class="token punctuation">:</span> 14px<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$color</span><span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token variable">$fontSize</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">body </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">cont</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$fontSize</span></span><span class="token punctuation">:</span> 18px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><p>传递多值参数</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token keyword">@mixin</span> <span class="token function">box-shadow</span><span class="token punctuation">(</span><span class="token variable">$shadow</span>...<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">-moz-box-shadow</span><span class="token punctuation">:</span> <span class="token variable">$shadow</span><span class="token punctuation">;</span>
+  <span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> <span class="token variable">$shadow</span><span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> <span class="token variable">$shadow</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.shadows </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">box-shadow</span><span class="token punctuation">(</span>0px 4px 4px #555<span class="token punctuation">,</span> 2px 6px 10px #6dd3ee<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>传递内容</p></li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token keyword">@mixin</span> <span class="token selector">style-for-iphone </span><span class="token punctuation">{</span>
+  <span class="token atrule"><span class="token rule">@media</span> only screen <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">min-device-width</span><span class="token punctuation">:</span> 320px<span class="token punctuation">)</span> <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">max-device-width</span><span class="token punctuation">:</span> 568px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token keyword">@content</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">@include</span> <span class="token selector">style-for-iphone </span><span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>内置函数</p> <ul><li>https://sass.bootcss.com/documentation/modules</li></ul></li> <li><p>自定义函数</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token keyword">@function</span> <span class="token function">double</span><span class="token punctuation">(</span><span class="token variable">$width</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">@return</span> <span class="token variable">$width</span> <span class="token operator">*</span> 2<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">p </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">double</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>@debug、@warn、@error</p> <ul><li>控制台有输出</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token keyword">@debug</span> <span class="token string">'This is a debug test'</span><span class="token punctuation">;</span>
+<span class="token keyword">@warn</span> <span class="token string">'This is a warn test'</span><span class="token punctuation">;</span>
+@error <span class="token string">'This is a error test'</span><span class="token punctuation">;</span>
+</code></pre></div></li></ul> <h3 id="_4-3-sass-高级"><a href="#_4-3-sass-高级" class="header-anchor">#</a> 4.3 Sass 高级</h3> <ul><li><p>条件控制</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token keyword">@function</span> <span class="token function">getzIndex</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$layer</span></span><span class="token punctuation">:</span> default<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property"><span class="token variable">$zindexMap</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+    <span class="token property">default</span><span class="token punctuation">:</span> 1<span class="token punctuation">,</span>
+    <span class="token property">modal</span><span class="token punctuation">:</span> 1000<span class="token punctuation">,</span>
+    <span class="token property">dropdown</span><span class="token punctuation">:</span> 500
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property"><span class="token variable">$zindex</span></span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token keyword">@if</span> <span class="token function">map-has-key</span><span class="token punctuation">(</span><span class="token variable">$zindexMap</span><span class="token punctuation">,</span> <span class="token variable">$layer</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token property"><span class="token variable">$zindex</span></span><span class="token punctuation">:</span> <span class="token function">map-get</span><span class="token punctuation">(</span><span class="token variable">$zindexMap</span><span class="token punctuation">,</span> <span class="token variable">$layer</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">@else</span> <span class="token punctuation">{</span>
+    <span class="token property"><span class="token variable">$zindex</span></span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">@return</span> <span class="token variable">$zindex</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">@debug</span> <span class="token function">getzIndex</span><span class="token punctuation">(</span><span class="token string">'m'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li><p>@if</p> <ul><li><p>三目运算</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token property"><span class="token variable">$screenWidth</span></span><span class="token punctuation">:</span> 800<span class="token punctuation">;</span>
+<span class="token selector">body </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">if</span><span class="token punctuation">(</span><span class="token variable">$screenWidth</span> <span class="token operator">&gt;</span> 768<span class="token punctuation">,</span> blue<span class="token punctuation">,</span> red<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>@if...@else if...@else</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token property"><span class="token variable">$screenWidth</span></span><span class="token punctuation">:</span> 800<span class="token punctuation">;</span>
+<span class="token keyword">@if</span> <span class="token selector"><span class="token variable">$screenWidth</span> &gt; 768 </span><span class="token punctuation">{</span>
+  <span class="token selector">body </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword">@else if</span> <span class="token selector"><span class="token variable">$screenWidth</span> &gt; 400 </span><span class="token punctuation">{</span>
+  <span class="token selector">span </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword">@else</span> <span class="token punctuation">{</span>
+  <span class="token selector">p </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ul></li> <li><p>@for</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">/*从1到5(包含5)*/</span>
+<span class="token keyword">@for</span> <span class="token variable">$i</span> <span class="token keyword">from</span> 1 <span class="token keyword">through</span> <span class="token selector">5 </span><span class="token punctuation">{</span>
+  <span class="token selector">.span<span class="token variable">#{$i}</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 20% <span class="token operator">*</span> <span class="token variable">$i</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*从1到5(不包含5)*/</span>
+<span class="token keyword">@for</span> <span class="token variable">$i</span> <span class="token keyword">from</span> <span class="token selector">1 to 5 </span><span class="token punctuation">{</span>
+  <span class="token selector">.span<span class="token variable">#{$i}</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 20% <span class="token operator">*</span> <span class="token variable">$i</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>@while</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token property"><span class="token variable">$j</span></span><span class="token punctuation">:</span> 6<span class="token punctuation">;</span>
+<span class="token keyword">@while</span> <span class="token selector"><span class="token variable">$j</span> &gt; 0 </span><span class="token punctuation">{</span>
+  <span class="token selector">.p<span class="token variable">#{$j}</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 20% <span class="token operator">*</span> <span class="token variable">$j</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token property"><span class="token variable">$j</span></span><span class="token punctuation">:</span> <span class="token variable">$j</span> <span class="token operator">-</span> 3<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>@each</p> <ul><li><p>常规遍历</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token property"><span class="token variable">$k</span></span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token keyword">@each</span> <span class="token selector"><span class="token variable">$c</span> in blue, red, green </span><span class="token punctuation">{</span>
+  <span class="token selector">.div<span class="token variable">#{$k}</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$c</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token property"><span class="token variable">$k</span></span><span class="token punctuation">:</span> <span class="token variable">$k</span> <span class="token operator">+</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>遍历 List</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token keyword">@each</span> <span class="token variable">$key</span><span class="token punctuation">,</span> <span class="token variable">$color</span> in <span class="token punctuation">(</span>default<span class="token punctuation">,</span> blue<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>info<span class="token punctuation">,</span> green<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>danger<span class="token punctuation">,</span> red<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token selector">.text-<span class="token variable">#{$key}</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$color</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>遍历 Map</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token keyword">@each</span> <span class="token variable">$key</span><span class="token punctuation">,</span> <span class="token variable">$value</span> in <span class="token punctuation">(</span><span class="token property">default</span><span class="token punctuation">:</span> blue<span class="token punctuation">,</span> <span class="token property">info</span><span class="token punctuation">:</span> green<span class="token punctuation">,</span> <span class="token property">danger</span><span class="token punctuation">:</span> red<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token selector">.label-<span class="token variable">#{$key}</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$value</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ul></li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/LGDHuaOPER/LGDHuaOPER.github.io--src/edit/master/docs/tech/css/Sass-学习笔记.md" target="_blank" rel="noopener noreferrer">帮助我改善此页面！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2020-2-25 22:45:15</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/tech/css/Less-学习笔记.html" class="prev">
+        Less-学习笔记
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fb4441b5.js" defer></script><script src="/assets/js/2.6f8ad18e.js" defer></script><script src="/assets/js/12.60342f6b.js" defer></script>
+  </body>
+</html>
